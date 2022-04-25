@@ -1,0 +1,30 @@
+<html><head></head><body bgcolor="black" style="text-align:center;"><canvas id="cw" width="512" height="512" style="height:90vh;max-width:512px;max-height:512px"></canvas><script>const l=document.getElementById("cw"),M=l.getContext("2d");var r=1886,v=32*r,b=0;function g(){var t=1e4*Math.sin(v++);return t-Math.floor(t)}M.globalAlpha=1,M.fillStyle="rgba(5,5,5,1.0)",M.fillRect(0,0,l.width,l.height),M.globalAlpha=.5;let p=[];function t(){p=[],M.clearRect(0,0,l.width,l.height);var t=25+15*g(),i=1+3*g(),h=1.5+i+5*g(),s=20+10*g(),n=1+3*g(),r=1.5+n+5*g(),a=14,o=Math.floor(g()*a),e=Math.floor(g()*a),c=Math.floor(g()*a),f=Math.floor(g()*a),u=Math.floor(g()*a),a=Math.floor(g()*a);v=60375,p=[],m(999,h,t,i,o,e,c),m(999,r,s,n,f,u,a),b=0,w()}function c(t){t={[1]:[128,127,128,127,32,64],6:[255,-128,0,128,255,-128],8:[200,55,200,55,200,55],12:[96,55,32,64,200,55],13:[30,30,0,60,140,60]}[t];return"rgb("+(t[0]+g()*t[1])+","+(t[2]+g()*t[3])+","+(t[4]+g()*t[5])+")"}function m(i,h,s,n,r,a,o){var e=p.length;for(let t=e;t<e+i;t++)p[t]=new f(2*g()-1,2*g()-1,2*g()-1,h,s,n,1,c(r),c(a),c(o))}function f(t,i,h,s,n,r,a,o,e,c){this.x=t,this.y=i,this.z=h,this.t=s,this.i=n,this.beta=r,this.h=a,this.strokeColor=o,this.o=e,this.u=c,this.rotate=()=>{const t=this.x,i=this.y;var h=this.x+this.t*(this.y-this.x)*.01,s=this.y+.01*(this.x*(this.i-this.z)-this.y),n=this.z+.01*(this.x*this.y-this.beta*this.z);this.x=h,this.y=s,this.z=n,M.beginPath(),M.lineWidth=this.h,M.strokeStyle=this.strokeColor,M.moveTo(l.width*(.5+.017*t),l.height*(.5+.011*i)),M.lineTo(l.width*(.5+.017*this.x),l.height*(.5+.011*this.y)),M.stroke(),M.beginPath(),M.lineWidth=this.h,M.strokeStyle=this.o,M.moveTo(l.width*(.5-.017*t),l.height*(.5+.011*i)),M.lineTo(l.width*(.5-.017*this.x),l.height*(.5+.011*this.y)),M.stroke(),M.beginPath(),M.lineWidth=this.h,M.strokeStyle=this.u;s=5e-4*(this.x-this.z),n=.01*this.y;M.moveTo(l.width*(.5+s)+2,l.height*(.5+n)),M.lineTo(l.width*(.5+s)+3,l.height*(.5+n)),M.moveTo(l.width*(.5-s)-2,l.height*(.5+n)),M.lineTo(l.width*(.5-s)-1,l.height*(.5+n)),M.stroke()}}function a(t){return Math.min(255,Math.max(0,1.02*(t-5)))}function w(){if(1e3<b){var t="Ubuntu Mono, Courier New";M.font="18px "+t,M.textAlign="center";var h=M.getImageData(0,0,512,512),s=h.data,n=s.length;for(i=0;i<n;i+=4)s[i]=a(s[i]),s[i+1]=a(s[i+1]),s[i+2]=a(s[i+2]);M.putImageData(h,0,0),M.fillStyle="#cccccc",M.fillText("#"+r,l.width/2,l.height-60),M.font="12px "+t,M.fillText("null colorful attractor floating",l.width/2,l.height-22),M.fillText("butterfly floating vector possible",l.width/2,l.height-11),M.fillStyle="#ffffff",M.globalAlpha=1,M.font="26px "+t,M.fillText("possible proof string",l.width/2,l.height-36),requestAnimationFrame(w)}else requestAnimationFrame(w);M.globalAlpha=1,M.fillStyle="rgba(0,0,0,0.1)",M.fillRect(0,0,l.width,l.height),M.globalAlpha=.5,p.forEach(t=>t.rotate()),b++}t();
+
+function record(canvas, time) {
+    var recordedChunks = [];
+    return new Promise(function (res, rej) {
+        var stream = canvas.captureStream(30 /*fps*/);
+        mediaRecorder = new MediaRecorder(stream, {
+            mimeType: "video/webm;codecs:vp9",
+            videoBitsPerSecond: 5000000,
+        });
+        mediaRecorder.start(4000);
+        setTimeout(function(){mediaRecorder.stop();}, time);
+        mediaRecorder.ondataavailable = function (event) {
+            recordedChunks.push(event.data);
+        }
+        mediaRecorder.onstop = function (event) {
+            var blob = new Blob(recordedChunks, {type: "video/webm" });
+            var url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href= url;
+            a.download = "video.webm";
+            a.click();
+            res(url);
+        }
+    })
+}
+record(document.getElementById("cw"),25000);
+
+</script>
+</body></html>
