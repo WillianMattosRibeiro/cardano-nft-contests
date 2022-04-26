@@ -4,16 +4,17 @@
 
 ## *Change 1*
 >
->    #### from
->    ``` js
+>#### from
+>``` js
 > a = u * Math.cos(r),
->    ```
+>```
+>
+>
+>#### to
 >    
->    #### to
->    
->    ``` js
+>``` js
 > a = u * Math.atan(r),
->    ```
+>```
 
 ---
 
@@ -45,11 +46,12 @@
 > 
 > ``` js
 > for (let t = o; t < o + i; t++) U[t] = new g(2 * l() - 1, 2 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))
+> ```
 > 
 > ### to
 > 
 > ``` js
-> for (let t = o; t < o + i; t++) U[t] = new g(2 * l() - 1, 4.5 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))> ```
+> for (let t = o; t < o + i; t++) U[t] = new g(2 * l() - 1, 4.5 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))
 > ```
 
 ---
@@ -79,7 +81,7 @@
 > ### to
 > 
 > ``` js
-> x0 = this.x, y0 = this.y, this.rotate(), x.beginPath(), x.lineWidth = 20, x.strokeStyle = this.t;> ```
+> x0 = this.x, y0 = this.y, this.rotate(), x.beginPath(), x.lineWidth = 20, x.strokeStyle = this.t;
 > ```
 
 ---
