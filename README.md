@@ -3,7 +3,7 @@ Cardano NFT contests codes, files and modifications
 ---
 697 (Original) ![image-original](https://user-images.githubusercontent.com/17055626/165387388-a7753a1d-25dd-4b40-b00b-36f131a05f77.png)
 ---
-697 (uterus version) ![image_hacked_uterus](https://user-images.githubusercontent.com/17055626/165387518-c07227f9-eed6-43e3-a5ed-6496125567ad.png)
+697 (uterus version) ![697-v1-uterus](https://user-images.githubusercontent.com/17055626/165388292-24d1a3fc-fe2c-4cd8-a526-20a6c4c778a9.png)
 ---
 697 (psychedelic version) ![697-v2-psychedelic](https://user-images.githubusercontent.com/17055626/165387722-e0bad9a6-61c9-4b72-b65a-21f4e5ff87c1.png)
 ---
