@@ -1,4 +1,4 @@
-# Beast 697 - v3 (Little Devil) - Modification 
+# Beast 697 - v1 (The Cockroach) - Modification 
 
 ---
 
@@ -6,32 +6,18 @@
 >
 >    #### from
 >    ``` js
->    var t = 1e4 * Math.sin(w++);
+> a = u * Math.cos(r),
 >    ```
 >    
 >    #### to
 >    
 >    ``` js
->    var t = 1e4 * Math.log(w++);
+> a = u * Math.atan(r),
 >    ```
 
 ---
 
 ## *Change 2*
-> ### from
-> 
-> ``` js
-> N = D, j(1), x.fillStyle = "#fff", x.fillRect(0, 0, A, A), j(.2), t = 0;
-> ```
-> 
-> ### to
-> 
-> ``` js
-> N = D, j(1), x.fillStyle = "#000", x.fillRect(0, 0, A, A), j(.2), t = 0;
-> ```
----
-
-## *Change 3*
 > ### from
 > 
 > ``` js
@@ -45,32 +31,30 @@
 > ### to
 > 
 > ``` js
-> [7]: [999, 50, 20, 0, 0, 0],
-> 20: [999, 35, 14, 0, 14, 5],
-> 21: [999, 30, 0, 20, 10, -3],
-> 22: [999, 20, 0, 20, 0, 0],
-> 29: [999, 5, 5, -3, 0, 0]
+> [7]: [70, 50, 20, 20, 60, 10],
+> 20: [50, 35, 14, 20, 14, 35],
+> 21: [300, 30, 200, 20, 100, -30],
+> 22: [20, 20, 20, 20, 20, 20],
+> 29: [10, 5, 5, -3, 40, 40]
+> ```
+---
+
+
+## *Change 3*
+> ### from
+> 
+> ``` js
+> for (let t = o; t < o + i; t++) U[t] = new g(2 * l() - 1, 2 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))
+> 
+> ### to
+> 
+> ``` js
+> for (let t = o; t < o + i; t++) U[t] = new g(2 * l() - 1, 4.5 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))> ```
 > ```
 
 ---
 
 ## *Change 4*
-> ### from
-> 
-> ``` js
-> for (let t = o; t < o + i; t++) U[t] = new g(2 * l() - 1, 2 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))
-> ```
-> 
-> ### to
-> 
-> ``` js
-> for (let t = o; t < o + i; t++) U[t] = new g(1.6 * l() - 1, 8.99 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))
-> ```
-> 
-> 
----
-
-## *Change 5*
 > ### from
 > 
 > ``` js
@@ -85,8 +69,7 @@
 
 ---
 
-## *Change 6*
-
+## *Change 5*
 > ### from
 > 
 > ``` js
@@ -96,23 +79,7 @@
 > ### to
 > 
 > ``` js
-> x0 = this.x, y0 = this.y, this.rotate(), x.beginPath(), x.lineWidth = 2.5, x.strokeStyle = this.t;
+> x0 = this.x, y0 = this.y, this.rotate(), x.beginPath(), x.lineWidth = 20, x.strokeStyle = this.t;> ```
 > ```
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
