@@ -48,7 +48,7 @@
       }
 
       function l() {
-        var t = 1e4 * Math.sin(w++);
+        var t = 1e4 * Math.log(w++);
         return t - Math.floor(t)
       }
 
@@ -57,7 +57,7 @@
       }
 
       function v() {
-        N = D, j(1), x.fillStyle = "#fff", x.fillRect(0, 0, A, A), j(.2), t = 0;
+        N = D, j(1), x.fillStyle = "#000", x.fillRect(0, 0, A, A), j(.2), t = 0;
         var i = .501744,
           n = .084417,
           e = .503629,
@@ -92,25 +92,25 @@
 
       function T(t) {
         var i = {
-          [7]: [5, 50, 20, 20, 60, 10],
-          20: [14, 35, 14, 20, 14, 35],
-          21: [170, -130, 200, 20, 50, -30],
-          22: [20, 20, 20, 20, 20, 20],
-          29: [10, 5, 5, -3, 40, 15]
+          [7]: [999, 50, 20, 0, 0, 0],
+          20: [999, 35, 14, 0, 14, 5],
+          21: [999, 30, 0, 20, 10, -3],
+          22: [999, 20, 0, 20, 0, 0],
+          29: [999, 5, 5, -3, 0, 0]
         };
         return "rgb(" + (i[t][0] + l() * i[t][1]) + "," + (i[t][2] + l() * i[t][3]) + "," + (i[t][4] + l() * i[t][5]) + ")"
       }
 
       function z(i, n, e, h, c, s, a) {
         var o = U.length;
-        for (let t = o; t < o + i; t++) U[t] = new g(2 * l() - 1, 2 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))
+        for (let t = o; t < o + i; t++) U[t] = new g(1.6 * l() - 1, 8.99 * l() - 1, 2 * l() - 1, n, e, h, c, s, T(a))
       }
 
       function g(t, i, n, e, h, c, s, a, o) {
         this.x = t, this.y = i, this.z = n, this.s = e, this.r = h, this.a = s, this.b = a, this.t = o, this.rotate = () => {
-          nx = this.x - .05 * Math.sin(this.a * this.y - this.s + this.y * Math.sin(this.x)), ny = this.y - .05 * Math.sin(this.b * this.x - this.r + this.x * Math.sin(this.x)), this.x = nx, this.y = ny, (.95 < .5 + q * this.x || .5 + q * this.x < .05 || .5 + y * (this.y - k) < .05 || .9 < .5 + y * (this.y - k)) && (F = !0)
+          nx = this.x - .05 * Math.cos(this.a * this.y - this.s + this.y * Math.exp(this.x)), ny = this.y - .05 * Math.atan(this.b * this.x - this.r + this.x * Math.log(this.x)), this.x = nx, this.y = ny, (.95 < .5 + q * this.x || .5 + q * this.x < .05 || .5 + y * (this.y - k) < .05 || .9 < .5 + y * (this.y - k)) && (F = !0)
         }, this.i = () => {
-          x0 = this.x, y0 = this.y, this.rotate(), x.beginPath(), x.lineWidth = 1, x.strokeStyle = this.t;
+          x0 = this.x, y0 = this.y, this.rotate(), x.beginPath(), x.lineWidth = 2.5, x.strokeStyle = this.t;
           var t = A * (.5 + y * (y0 - k)),
             i = A * (.5 + y * (this.y - k));
           x.moveTo(A * (.5 + q * x0), t), x.lineTo(A * (.5 + q * this.x), i), x.moveTo(A * (.5 - q * x0), t), x.lineTo(A * (.5 - q * this.x), i), x.stroke()
