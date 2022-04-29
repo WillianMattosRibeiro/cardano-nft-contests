@@ -4,7 +4,7 @@
 
 Original Beasts: <a href="website/original-galery.html">Galery</a>
 
-Hack Your Beast contest: <a href="website/hack-your-beast-galery.html">Created Arts</a>
+Hack Your Beast contest: <a href="website/hack-your-beast-galery-v2.html">Created Arts</a>
 
 ---
 
