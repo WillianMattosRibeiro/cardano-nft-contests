@@ -10,6 +10,6 @@ Hack Your Beast contest: <a href="website/hack-your-beast-galery-v2.html">Create
 
 # Butterfly Effect
 
-Original Butterflies: <a href="website/butterfly-effect-galery.html">Galery</a>
+Original Butterflies: <a href="website/butterfly-effect-galery-v2.html">Galery</a>
 
 ---
