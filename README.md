@@ -13,3 +13,7 @@ Hack Your Beast contest: <a href="https://willianmattosribeiro.github.io/cardano
 Original Butterflies: <a href="https://willianmattosribeiro.github.io/cardano-nft-contests/website/butterfly-effect-galery.html">Galery</a>
 
 ---
+
+Roadmap:
+
+- Low Resolution Images in galeries (high-res or animation on-click )
