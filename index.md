@@ -13,3 +13,9 @@ Hack Your Beast contest: <a href="website/hack-your-beast-galery-v2.html">Create
 Original Butterflies: <a href="website/butterfly-effect-galery-v2.html">Galery</a>
 
 ---
+
+# Investing
+
+Strategy: <a href="website/arca-strategy.html">Galery</a>
+
+---
