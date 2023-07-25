@@ -14,6 +14,8 @@ Original Butterflies: <a href="https://willianmattosribeiro.github.io/cardano-nf
 
 ---
 
+Strategys: <a href="https://willianmattosribeiro.github.io/cardano-nft-contests/website/arca-strategy.html">Galery</a>
+
 Roadmap:
 
 - Low Resolution Images in galeries (high-res or animation on-click )
